@@ -1,0 +1,22 @@
+{
+  "name": "playwright_typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test-dev": "cross-env TEST_ENV=dev npx playwright test HandlingMultipleEnv.spec.ts --project=chromium",
+    "test-uat": "cross-env $env:TEST_ENV='uat' npx playwright test HandlingMultipleEnv.spec.ts --project=chromium --headed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.61.0",
+    "@types/node": "^25.9.1",
+    "allure-playwright": "^3.10.2"
+  },
+  "dependencies": {
+    "cross-env": "^10.1.0",
+    "dotenv": "^17.4.2"
+  }
+}
